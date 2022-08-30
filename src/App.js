@@ -18,11 +18,12 @@ function App() {
     // We should of course check email and password
     // But it's just a dummy/ demo anyways
     setIsLoggedIn(true);
+      localStorage.setItem('isLoggedIn', '1');
   };
 
   const logoutHandler = () => {
     setIsLoggedIn(false);
-    localStorage.setItem('isLoggedIn', '1');
+    localStorage.removeItem('isLoggedIn');
   };
 
   return (
